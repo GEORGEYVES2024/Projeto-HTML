@@ -1,0 +1,61 @@
+
+function ajaxCharacter() {
+  console.log("ajaxCharacter");
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://rickandmortyapi.com/api/character", true);
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const data = JSON.parse(xhr.responseText);
+      const characterList = document.getElementById("character-list");
+      data.results.forEach((character) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `O personagem ${character.name} está ${character.status}`;
+        characterList.appendChild(listItem);
+      });
+    } else {
+      console.error("Erro na requisição:", xhr.statusText);
+    }
+  };
+
+  xhr.onerror = function () {
+    console.error("Erro na requisição:", xhr.statusText);
+  };
+
+  xhr.send();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function fetchCharacter() {
+  fetch("https://rickandmortyapi.com/api/character")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Não foi possível efetuar a requisição.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const characterList = document.getElementById("character-list");
+      data.results.forEach((character) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `O personagem ${character.name} está ${character.status}`;
+        characterList.appendChild(listItem);
+      });
+    })
+    .catch((error) => console.error("Erro na requisição:", error));
+}

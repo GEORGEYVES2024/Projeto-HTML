@@ -1,0 +1,2093 @@
+ExercicioReceita.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <style>
+    .main-container {
+      margin-left: 21px;
+      max-width: 883px;
+      height: 2865;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      max-width: 883px;
+      max-height: 374px;
+      margin-bottom: 21.5px;
+    }
+
+    .recipe-title {
+      margin: 0 0 10px 0;
+      top: 420px;
+      left: 21px;
+      width: 884px;
+      height: 187px;
+      text-align: left;
+      font: normal normal 900 89px/79px Montserrat;
+      letter-spacing: 0px;
+      color: #ffb300;
+      opacity: 1;
+    }
+
+    .author-text {
+      margin: 0 0 34px 0;
+      width: 884px;
+      height: 28px;
+      text-align: right;
+      font: normal normal bold 21px/34px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .about-dish {
+      margin: 0 0 70px 0;
+      width: 883px;
+      height: 197px;
+      text-align: left;
+      font: normal normal 600 21px/34px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .preparation-info {
+      border-bottom: 5px solid #999999;
+      border-top: 5px solid #999999;
+    }
+
+    .preparation-info-time {
+      margin: 29px 0 34px 0;
+    }
+
+    .preparation-info-ration {
+      margin: 0 0 29px 0;
+    }
+
+    .preparation-info-bold-text {
+      width: 123px;
+      height: 25px;
+      text-align: left;
+      font: normal normal 900 21px/25px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    .preparation-info-text {
+      width: 135px;
+      height: 25px;
+      text-align: left;
+      font: normal normal 21px/25px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+
+    .ingredients-title {
+      width: 235px;
+      height: 42px;
+      margin: 34px 19px 0 0;
+      /* UI Properties */
+      text-align: left;
+      font: normal normal 900 34px/42px Montserrat;
+      letter-spacing: 0px;
+      color: #ffb300;
+      opacity: 1;
+    }
+
+    .ingredient-list-container {
+      margin-bottom: 23px;
+      width: 753px;
+      height: 366px;
+      text-align: left;
+      font: normal normal 600 21px/34px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+    .ingredients-container {
+      border-bottom: 5px solid #999999;
+    }
+
+    .preparation-steps-container {
+      margin-top: 1px;
+      border-bottom: 5px solid #999999;
+    }
+
+    .preparation-title {
+      width: 315px;
+      height: 42px;
+      margin-top: 34px;
+      margin-bottom: 35px;
+      /* UI Properties */
+      text-align: left;
+      font: normal normal 900 34px/42px Montserrat;
+      letter-spacing: 0px;
+      color: #ffb300;
+      opacity: 1;
+    }
+
+    .preparation-steps {
+    }
+
+    .preparation-steps {
+      margin-top: 34px;
+      margin-bottom: 30px;
+      max-width: 844px;
+      max-height: 380px;
+      /* UI Properties */
+      text-align: left;
+      font: normal normal 600 21px/34px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .recipe-video-title {
+      margin-top: 34.5px;
+      margin-bottom: 35px;
+      width: 311px;
+      height: 42px;
+      text-align: left;
+      font: normal normal 900 34px/42px Montserrat;
+      letter-spacing: 0px;
+      color: #ffb300;
+      opacity: 1;
+    }
+
+    .recipe-video-iframe {
+      width: 883px;
+      height: 497px;
+      /* UI Properties */
+      border: 1px solid #707070;
+      opacity: 1;
+    }
+
+    .go-back-to-top {
+      margin-top: 31px;
+      margin-bottom: 110px;
+      width: 263px;
+      height: 25px;
+      text-align: left;
+      text-decoration: underline;
+      font: normal normal 900 21px/25px Montserrat;
+      letter-spacing: 0px;
+      color: #0037b3;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+  </style>
+
+  <body>
+    <main class="main-container">
+      <img
+        src="https://redesupermarket.com.br/wp-content/uploads/2022/04/sTROGONOFF.png"
+        alt="receita pronta"
+      />
+      <h1 class="recipe-title" id="recipe-title">Strogonoff de Frango</h1>
+      <span class="author-text"> Autora: Fernanda </span>
+      <div class="about-dish">
+        <p>
+          O Strogonoff, apesar de ser uma receita muito famosa entre os
+          brasileiros, nasceu na Rússia e era um prato servidor para nobreza
+          russa.
+        </p>
+        <p>
+          No Brasil, se popularizou nos anos 1970 e era uma comida especial,
+          servida em festas. Não demorou muito, o strogonoff chegou nos pratos
+          de todos brasileiros e hoje faz parte do nosso dia a dia.
+        </p>
+      </div>
+
+      <div class="preparation-info">
+        <div class="preparation-info-time">
+          <span class="preparation-info-bold-text"> PREPARO: </span>
+          <span class="preparation-info-text"> 60 MINUTOS </span>
+        </div>
+
+        <div class="preparation-info-ration">
+          <span class="preparation-info-bold-text"> RENDIMENTO: </span>
+          <span class="preparation-info-text"> 10 PORÇÕES </span>
+        </div>
+      </div>
+
+      <div class="ingredients-container">
+        <h2 class="ingredients-title">Ingredientes</h2>
+
+        <ul class="ingredient-list-container">
+          <li class="ingredients-item">3 peitos de frango cortados em cubo.</li>
+          <li class="ingredients-item">1 dente de alho picado</li>
+          <li class="ingredients-item">Sal e pimenta a gosto</li>
+          <li class="ingredients-item">1 cebola picado</li>
+          <li class="ingredients-item">2 colheres de sopa de maionese</li>
+          <li class="ingredients-item">1 colher de manteiga</li>
+          <li class="ingredients-item">1/2 copo de ketchup</li>
+          <li class="ingredients-item">1/3 copo de mostarda</li>
+          <li class="ingredients-item">1 copo de cogumelos</li>
+          <li class="ingredients-item">1 copo de creme de leite</li>
+          <li class="ingredients-item">batata palha a gosto</li>
+        </ul>
+      </div>
+
+      <div class="preparation-steps-container">
+        <h2 class="preparation-title">Modo de preparo</h2>
+        <ol class="preparation-steps">
+          <li class="preparation-steps-item">
+            Em uma panela, misture o frango, o alho, a maionese, o sal e a
+            pimenta.
+          </li>
+          <li class="preparation-steps-item">
+            Em uma frigideira grande, derreta a manteiga e doure a cebola.
+          </li>
+          <li class="preparation-steps-item">
+            Junte o frango temperado até que esteja dourado.
+          </li>
+          <li class="preparation-steps-item">
+            Adicione os cogumelos, o ketchup e a mostarda.
+          </li>
+          <li class="preparation-steps-item">
+            Incopore o creme de leite e retira do fogo antes de ferver.
+          </li>
+          <li class="preparation-steps-item">
+            Sirva com arroz branco e batata palha.
+          </li>
+        </ol>
+      </div>
+
+      <div class="recipe-video-container">
+        <h2 class="recipe-video-title">Vídeo da Receita</h2>
+        <iframe
+          class="recipe-video-iframe"
+          src="https://www.youtube.com/embed/DxrbRHGrfmA?si=mmCivi6V5N2gT7Ly"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="go-back-to-top">
+        <a href="#recipe-title">VOLTA AO TOPO</a>
+      </div>
+    </main>
+  </body>
+</html>
+
+
+/ExercicioCV.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--reset all css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+      }
+
+      main {
+        margin-bottom: 34px;
+      }
+
+      .avatar-profile-banner {
+        font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+        font-size: 58px;
+        color: white;
+        background-color: #3a3a3a;
+        max-height: 58px;
+        max-width: 58px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .profile-img {
+        object-fit: fill;
+        border-radius: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+      }
+
+      .avatar-bagde {
+        position: absolute;
+        background-color: lightskyblue;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .header-banner {
+        /* Layout Properties */
+        top: 0px;
+        left: 1px;
+        width: 1919px;
+        height: 67px;
+        /* UI Properties */
+        background: #3a3a3a 0% 0% no-repeat padding-box;
+        opacity: 1;
+        display: flex;
+      }
+
+      .avatar-header-container {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        padding-left: 553px;
+        padding-top: 5px;
+      }
+      .local-links {
+        width: 1100px;
+        height: 17px;
+        margin-top: 26px;
+        margin-bottom: 24px;
+        margin-left: 294px;
+      }
+
+      .nav-link {
+        font: normal normal bold 13px/17px Segoe UI;
+        text-decoration: underline;
+        color: white;
+        padding: 0 17px;
+      }
+
+      .topcard{
+        width: 100%;
+      }
+
+      .topcard-img {
+        top: 0.5px;
+        left: 1px;
+
+        /* UI Properties */
+        border: 1px solid #707070;
+        opacity: 1;
+      }
+
+      .top-card-img {
+        object-fit: cover;
+        width: 100%;
+        min-height: 310px;
+        max-height: 310px;
+      }
+
+      .avatar-profile-container {
+        /* Layout Properties */
+        width: 260px;
+        height: 260px;
+        /* UI Properties */
+        border-radius: 50%;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .presentation {
+        display: flex;
+      }
+
+      .profile-info {
+        margin-top: -133px;
+        margin-left: 554px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .social-bagdes {
+        top: 477px;
+        left: 577px;
+        width: 216px;
+        min-height: 58px;
+        /* UI Properties */
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+
+        position: absolute;
+        z-index: 2;
+      }
+      .social-badge {
+        display: flex;
+        min-width: 56px;
+        min-height: 56px;
+        /* UI Properties */
+        border-radius: 50%;
+        background-color: #3a3a3a;
+        border: 1px solid #414141;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .social-linkedin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-github {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .social-badge-text {
+        width: 29px;
+        height: 11px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal 600 8px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .presentation-info {
+        margin-left: 34px;
+      }
+
+      .name {
+        margin-top: -0.5px;
+        width: auto;
+        height: 73px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 55px/73px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .role-name {
+        width: 285px;
+        height: 46px;
+        /* UI Properties */
+        text-align: left;
+        font: italic normal 300 34px/46px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .hi-message {
+        margin-top: 34px;
+        margin-bottom: 21px;
+        width: 65px;
+        height: 46px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 34px/46px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .about-me {
+        width: 518px;
+        height: 305px;
+        /* UI Properties */
+        text-align: left;
+        word-wrap: break-word;
+        font: normal normal 600 21px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+        overflow: hidden;
+      }
+
+      .formation {
+        width: 1919px;
+        height: 353px;
+        padding-top: 34px;
+        padding-bottom: 32px;
+        /* UI Properties */
+        background: #dedede 0% 0% no-repeat padding-box;
+        opacity: 1;
+      }
+
+      .formation-title {
+        margin-left: 553px;
+        margin-bottom: 32px;
+        width: 230px;
+        height: 53px;
+        text-align: center;
+        font: normal normal 300 55px/73px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .formation-item {
+        margin-left: 561px;
+        margin: 21px 21px 0 561px;
+        width: 8px;
+        height: 66px;
+        /* UI Properties */
+        background: #000000 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .formation-item-text {
+        margin-left: 21px;
+        margin-top: -4px;
+        margin-bottom: -4px;
+      }
+
+      .formation-item-text-year {
+        width: 109px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal 600 13px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .formation-name {
+        width: 844px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 21px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .formation-entity {
+        width: 558px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal 600 13px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .experience {
+        padding-top: 34px;
+        padding-bottom: 32px;
+        width: 1919px;
+        height: 353px;
+        padding-bottom: 32px;
+        /* UI Properties */
+        background: #434343 0% 0% no-repeat padding-box;
+        opacity: 1;
+      }
+
+      .experience-title {
+        margin-left: 553px;
+        margin-bottom: 32px;
+        width: 230px;
+        height: 53px;
+        text-align: center;
+        font: normal normal 300 55px/73px Segoe UI;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+
+      .experience-item {
+        margin-left: 561px;
+        margin: 21px 21px 0 561px;
+        width: 8px;
+        height: 66px;
+        /* UI Properties */
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .experience-item-text {
+        margin-left: 21px;
+        margin-top: -4px;
+        margin-bottom: -4px;
+      }
+
+      .experience-item-text-year {
+        width: 109px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal 600 13px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+
+      .experience-name {
+        width: 844px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 21px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+
+      .experience-entity {
+        width: 558px;
+        height: 31px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal 600 13px/34px Segoe UI;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+
+      .projects {
+        padding-left: 553px;
+        min-width: 1919px;
+        min-height: 353px;
+        padding-top: 34px;
+        padding-bottom: 32px;
+        /* UI Properties */
+        opacity: 1;
+      }
+
+      .projects-title {
+        margin-bottom: 50.9px;
+        width: 230px;
+        min-height: 53px;
+        text-align: left;
+        font: normal normal 300 55px/73px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .projects-list {
+        width: 865px;
+        height: 353px;
+        opacity: 1;
+        display: flex;
+      }
+
+      .projects-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 54.53px;
+        width: 260px;
+        height: 335px;
+        /* UI Properties */
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 5px;
+        opacity: 1;
+      }
+
+      .project-img-and-description {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card-image {
+        margin-top: 16.9px;
+        margin-right: 16.53px;
+        margin-left: 11.61px;
+        margin-bottom: 8px;
+        width: 232px;
+        height: 129px;
+        object-fit: scale-down;
+      }
+
+      .project-title {
+        margin-left: 11px;
+        width: 167px;
+        height: 28px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 21px/28px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .project-description {
+        margin-left: 11px;
+        width: 232px;
+        height: 76px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal normal 13px/17px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .card-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        padding-bottom: 19px;
+      }
+
+      .card-button {
+        min-width: 110px;
+        min-height: 34px;
+        /* UI Properties */
+        background: #585858 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+      }
+
+      .project-link {
+        width: 78px;
+        height: 16px;
+        text-align: left;
+        font: normal normal bold 12px/16px Segoe UI;
+        letter-spacing: 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .contact-container {
+        padding-top: 34px;
+        width: 1921px;
+        height: 609px;
+        /* UI Properties */
+        background: #000000 0% 0% no-repeat padding-box;
+        opacity: 1;
+        display: flex;
+      }
+
+      .contact-info-container {
+        margin-left: 554px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        width: 398px;
+        height: 200px;
+      }
+
+      .contact-title-text {
+        width: 185px;
+        height: 73px;
+        text-align: left;
+        font: normal normal 300 55px/73px Segoe UI;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+      }
+
+      .contact-text {
+        /* UI Properties */
+        margin-top: 43px;
+        text-align: left;
+        font: normal normal normal 21px/28px Segoe UI;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+      }
+
+      .social-bagdes-footer {
+        width: 216px;
+        margin-top: 55px;
+        margin-left: -33px;
+        min-height: 58px;
+        /* UI Properties */
+        opacity: 1;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .form-input-label-text {
+        color: white;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-input-label-text {
+        width: auto;
+        height: 17px;
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 13px/17px Segoe UI;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+      }
+
+      .input-box {
+        margin-bottom: 34px;
+        width: 398px;
+        height: 34px;
+        /* UI Properties */
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 4px;
+        opacity: 1;
+      }
+
+      .input-box-message {
+        margin-bottom: 15px;
+        width: 398px;
+        height: 133px;
+        /* UI Properties */
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 4px;
+        opacity: 1;
+      }
+
+      .submit-button {
+        border: none;
+        width: 122px;
+        height: 34px;
+        /* UI Properties */
+        background: #585858 0% 0% no-repeat padding-box;
+border-radius: 5px;
+        margin: 0 auto;
+        
+      }
+
+      .submit-button > p {
+        height: 16px;
+        text-align: center;
+        font: normal normal bold 12px/16px Segoe UI;
+        letter-spacing: 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="topcard">
+        <header class="header-banner">
+          <div class="avatar-header-container">
+            <div class="avatar-profile-banner">
+              <img
+                class="profile-img"
+                src="profilepic.jpg"
+                alt="Profile Photo"
+              />
+            </div>
+          </div>
+
+          <nav class="local-links">
+            <a href="#presentation" class="nav-link"> APRESENTAÇÃO </a>
+            <a href="#presentation" class="nav-link"> FORMACAO </a>
+            <a href="#experience" class="nav-link"> EXPERIÊNCIA </a>
+            <a href="#projects" class="nav-link"> PROJETOS </a>
+            <a href="#contact" class="nav-link"> FALE CONMIGO! </a>
+          </nav>
+        </header>
+        <img src="top-card.jpg" alt="" class="top-card-img" />
+      </div>
+      <div class="presentation" id="presentation">
+        <div class="profile-info">
+          <div class="avatar-profile-container">
+            <img class="profile-img" src="profilepic.jpg" alt="Profile Photo" />
+          </div>
+          <div class="social-bagdes">
+            <a href="">
+              <div class="social-linkedin">
+                <div class="social-badge">
+                  <i
+                    class="fa-brands fa-linkedin-in fa-xl"
+                    style="color: #ffffff"
+                  ></i>
+                </div>
+                <span class="social-badge-text">LINKEDIN</span>
+              </div>
+            </a>
+
+            <a href="">
+              <div class="social-github">
+                <div class="social-badge">
+                  <i
+                    class="social-badge-icon fa-brands fa-xl fa-github"
+                    style="color: #ffffff"
+                  ></i>
+                </div>
+                <span class="social-badge-text">GITHUB</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="presentation-info">
+          <h2 class="name">Alejandro Amoroso</h2>
+          <h3 class="role-name">Full-Stack Devolper</h3>
+          <h4 class="hi-message">Olá</h4>
+
+          <p class="about-me">
+            Aqui irá entrar um breve texto de apresentação. Lorem ipsum dolor
+            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+            amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            diam nonumy eirmod tempor invidunt ut labore et.asdasdasdasdasdas
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <div class="formation" id="formation">
+        <h2 class="formation-title">Formação</h2>
+        <ul class="formation-list">
+          <li class="formation-item">
+            <span class="formation-item-text-year formation-item-text"
+              >2018-2024</span
+            >
+            <span class="formation-name formation-item-text"
+              >bacherald assadas das dasdas</span
+            >
+            <span class="formation-entity formation-item-text"
+              >ASDSADASDASDASDASDASDAS</span
+            >
+          </li>
+          <li class="formation-item">
+            <span class="formation-item-text-year formation-item-text"
+              >2018-2024</span
+            >
+            <span class="formation-name formation-item-text"
+              >bacherald assadas das dasdas</span
+            >
+            <span class="formation-entity formation-item-text"
+              >universidad blah blah blah</span
+            >
+          </li>
+          <li class="formation-item">
+            <span class="formation-item-text-year formation-item-text"
+              >2018-2024</span
+            >
+            <span class="formation-name formation-item-text"
+              >bacherald assadas das dasdas</span
+            >
+            <span class="formation-entity formation-item-text"
+              >universidad blah blah blah</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="experience" id="experience">
+        <h2 class="experience-title">Experiência</h2>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <span class="experience-item-text-year experience-item-text"
+              >2018-2024</span
+            >
+            <span class="experience-name experience-item-text"
+              >head tech assadas das dasdas</span
+            >
+            <span class="experience-entity experience-item-text"
+              >ASDSADASDASDASDASDASDAS</span
+            >
+          </li>
+          <li class="experience-item">
+            <span class="experience-item-text-year experience-item-text"
+              >2018-2024</span
+            >
+            <span class="experience-name experience-item-text"
+              >bacherald assadas das dasdas</span
+            >
+            <span class="experience-entity experience-item-text"
+              >universidad blah blah blah</span
+            >
+          </li>
+          <li class="experience-item">
+            <span class="experience-item-text-year experience-item-text"
+              >2018-2024</span
+            >
+            <span class="experience-name experience-item-text"
+              >bacherald assadas das dasdas</span
+            >
+            <span class="experience-entity experience-item-text"
+              >universidad blah blah blah</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="projects" id="projects">
+        <h2 class="projects-title">Projetos</h2>
+        <ul class="projects-list">
+          <li class="projects-item">
+            <div class="project-img-and-description">
+              <img src="site1-preview.png" alt="" class="project-card-image" />
+              <h3 class="project-title">Site Recriado</h3>
+              <p class="project-description">Project descripton adasdas</p>
+            </div>
+            <div class="card-buttons">
+              <a href="" class="project-link card-button">REPOSITÓRIO</a>
+              <a href="" class="project-link card-button">VER DEMO</a>
+            </div>
+          </li>
+          <li class="projects-item">
+            <div class="project-img-and-description">
+              <img src="receita.png" alt="" class="project-card-image" />
+              <h3 class="project-title">Receita</h3>
+              <p class="project-description">Project descripton adasdas</p>
+            </div>
+            <div class="card-buttons">
+              <a href="" class="project-link card-button">REPOSITÓRIO</a>
+              <a href="" class="project-link card-button">VER DEMO</a>
+            </div>
+          </li>
+          <li class="projects-item">
+            <div class="project-img-and-description">
+              <img src="site1-preview.png" alt="" class="project-card-image" />
+              <h3 class="project-title">SQL</h3>
+              <p class="project-description">Project descripton adasdas</p>
+            </div>
+            <div class="card-buttons">
+              <a href="" class="project-link card-button">REPOSITÓRIO</a>
+              <a href="" class="project-link card-button">VER DEMO</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact-container">
+        <div class="contact-info-container">
+          <span class="contact-title-text"> Contacto </span>
+          <div class="contact-info">
+            <span class="contact-text"> Quer entrar em contato comigo? </span>
+            <span class="contact-text">
+              Preencha o formulário ao lado e entrarei em contato o mais rápido
+              possível.
+            </span>
+            <span class="contact-text"
+              >Você também pode me encontrar nas seguintes redes sociais:
+            </span>
+
+            <div>
+              <div class="social-bagdes-footer">
+                <a href="">
+                  <div class="social-linkedin">
+                    <div class="social-badge">
+                      <i
+                        class="fa-brands fa-linkedin-in fa-xl"
+                        style="color: #ffffff"
+                      ></i>
+                    </div>
+                    <span class="social-badge-text">LINKEDIN</span>
+                  </div>
+                </a>
+
+                <a href="">
+                  <div class="social-github">
+                    <div class="social-badge">
+                      <i
+                        class="social-badge-icon fa-brands fa-xl fa-github"
+                        style="color: #ffffff"
+                      ></i>
+                    </div>
+                    <span class="social-badge-text">GITHUB</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="" class="contact-form">
+          <label for="input-box-name" class="form-input-label-text">NOME</label>
+          <input
+            id="input-box-name"
+            type="text"
+            class="input-box"
+            name="name"
+          />
+
+          <label for="input-box-email" class="form-input-label-text"
+            >E-MAIL</label
+          >
+          <input
+            id="input-box-email"
+            type="email"
+            class="input-box"
+            name="email"
+          />
+
+          <label for="input-box-subject" class="form-input-label-text"
+            >ASSUNTO</label
+          >
+          <input
+            id="input-box-subject"
+            type="text"
+            class="input-box"
+            name="subject"
+          />
+
+          <label for="input-box-message" class="form-input-label-text"
+            >MENSAGEM</label
+          >
+          <textarea
+            id="input-box-message"
+            type="text"
+            class="input-box-message"
+            name="message"
+          >
+          </textarea>
+
+          <button class="submit-button"><p>ENVIAR</p></button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
+
+ApiImagenesNasa/ExercicioSiteImagensDaNasa.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa Picture of the Day</title>
+</head>
+
+<body>
+    <header class="py-4 mb-4" style="background-color: cadetblue; color: white;">
+        <h1 class="text-center">Nasa Picture of the Day</h1>
+
+        <!--  BOOTSTRAP JS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- BOOTSTRAP JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+            <link rel="stylesheet" href="style.css">
+    
+    </header>
+    <div>
+        <div class="container">
+            <form id="search-form" action="" >
+                <div class="row">
+                    <fieldset class="col-auto text-center text-md-start">
+                        <legend>Escolha o tipo de pesquisa</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="search-type-random" name="search-type"
+                                value="random" checked />
+                            <label class="form-check-label" for="search-type-random">Imagens aleatórias</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="search-type-data-range" name="search-type"
+                                value="data-range" checked />
+                            <label class="form-check-label" for="search-type-data-range">Imagens por período</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="col-auto" data-search-type-fieldset="random">
+                        <legend>Imagens aleatórias</legend>
+                        <label for="random-qty">Quantidade</label>
+                        <input type="number" name="random-qty" id="random-qty" type="number" value="10"
+                            class="form-control" />
+                    </fieldset>
+
+                    <fieldset class="col-auto" data-search-type-fieldset="data-range" disabled>
+                        <legend>Imagens por período</legend>
+
+                        <div class="row">
+                            <div class="col-auto">
+                                <label for="start-date">Data de inicio:</label>
+                                <input type="date" id="start-date" min="2024-01-01" name="start-date" type="date" class="form-control" />
+                            </div>
+
+                            <div class="col-auto">
+                                <label for="end-date">Data final:</label>
+                                <input type="date" id="end-date" name="end-date" type="date" class="form-control" />
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="my-2">
+                    <button class="btn btn-primary" type="submit">Pesquisar</button>
+                </div>
+            </form>
+        </div>
+
+
+        <section class="container mt-4">
+            <div class="d-flex flex-wrap justify-content-center" id="search-results">
+
+          
+            </div>
+        </section>
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+ApiImagenesNasa
+/script.js
+
+
+function createCards(title, description, imague_url, image_description) {
+  //creating card elements
+  let cardElement = document.createElement("article");
+  cardElement.classList.add("card", "mb-2", "mx-2");
+
+  let imgElement = createImage(imague_url, image_description);
+  imgElement.classList.add("card-img-top");
+  imgElement.src = imague_url;
+  imgElement.alt = "alt-text";
+
+  let cardBody = document.createElement("div");
+  cardBody.classList.add("card-body");
+
+  let cardTitle = document.createElement("h3");
+  cardTitle.classList.add("card-title");
+  cardTitle.textContent = title;
+
+  let cardDescription = document.createElement("p");
+  cardDescription.classList.add("card-text");
+  cardDescription.textContent = description;
+
+  //appenidng elements
+  cardElement.appendChild(imgElement);
+  cardElement.appendChild(cardBody);
+
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardDescription);
+
+  return cardElement;
+}
+
+function createImage(url, description) {
+  let el;
+
+  if (url && description) {
+    el = document.createElement("img");
+    el.src = url;
+    el.alt = description;
+  } else {
+    el = document.createElement("div");
+    el.classList.add("img-sample");
+  }
+  return el;
+}
+
+
+function createSampleCard() {
+  return createCards("Carregando...", "...");
+}
+
+// function constructor with class:
+class ApiConnection {
+ 
+    //declarando propiedades so de lida para que nao mudem os dados
+    get API_URL() {
+        return "https://api.nasa.gov/planetary/apod";
+    }
+
+    get API_KEY() {
+        return "DEMO_KEY"; 
+    }
+
+    async getRandomImages(count) {
+
+        const request_url = `${this.API_URL}?api_key=${this.API_KEY}&count=${count}`;
+        const resp = await fetch(request_url);
+
+        if (resp.ok) {
+            return await resp.json();
+        }
+        throw new Error("Ocorreu um erro na requisição");
+    }
+    async getImagesForDateRange(start_date, end_date) {
+
+        let request_url = this.API_URL + '?api_key=' + this.API_KEY;
+        if (end_date) {
+            request_url += '&start_date=' + start_date + '&end_date=' + end_date;
+        } else {
+            request_url += '&start_date=' + start_date;
+        }
+
+
+        const resp = await fetch(request_url);
+        if (resp.ok) {
+            return await resp.json();
+        }
+        throw new Error(`Error fetching API, status: ${resp.status}`);
+    }
+}
+
+
+/*
+// function constructor with prototype:
+function ApiConnection(){}
+
+ApiConnection.prototype.API_URL = "https://api.nasa.gov/planetary/apod";
+ApiConnection.prototype.API_KEY = "NluNws4dbwVsEUZ8fPIQlELKCu0h0FArlnWuFn69"
+
+ApiConnection.prototype.getRandomImages = async function (count) {
+
+    const request_url = `${this.API_URL}?api_key=${this.API_KEY}&count=${count}`;
+        const resp = await fetch(request_url);
+
+        if (resp.ok) {
+          return await resp.json();
+        }
+        throw new Error("Ocorreu um erro na requisição");
+}
+
+
+ApiConnection.prototype.getImagesForDateRange = async function (start_date, end_date) {
+
+    let request_url = this.API_URL + '?api_key=' + this.API_KEY;
+       if(end_date){
+        request_url +='&start_date='+start_date+ '&end_date='+end_date;
+       }else{
+        request_url +='&start_date='+start_date;
+       }
+       
+
+    const resp = await fetch(request_url)
+    if(resp.ok){
+        return await resp.json();
+    }
+    throw new Error (`Error fetching API, status: ${resp.status}`)
+}
+*/
+
+//
+/** 
+ * api request try catch
+async function requestRandomImages(count) {
+
+    try {  
+        const resp = await fetch(request_url);
+
+        if (!resp.ok) {
+          throw new Error("Ocorreu um erro na requisição");
+        }
+    
+        const data = await resp.json()
+        console.log(data);
+
+        return data;
+    }
+    catch(error){
+        console.error(error);
+    }
+
+}
+
+let requestData = requestRandomImages(25);
+
+*/
+
+//let apiConnection = new ApiConnection();
+
+
+
+document.addEventListener("DOMContentLoaded", function startApp(){
+
+    const search_results_el = document.getElementById("search-results");
+    const search_form_el = document.getElementById("search-form");
+    const search_type_options_els = document.querySelectorAll('[name=search-type]');
+    const start_date_el = document.getElementById("start-date");
+    const end_date_el = document.getElementById("end-date");
+    const api_connection = new ApiConnection();
+
+    console.log("started app!!!");
+//create card sample elements
+function displayCardPlaceHolders(el, count){
+    el.innerHTML ="";
+    for (let i = 0; i < count; i++){
+        el.appendChild(createSampleCard());
+    }
+}
+
+displayCardPlaceHolders(search_results_el, 15);
+
+function displayResultsAsCards(el, results){
+    el.innerHTML ="";
+    results.forEach(result => {
+        if(!result.url.includes("youtube")){
+        el.appendChild(createCards(result.title, truncateText(result.explanation), result.url, result.title));  
+    }
+      })
+}
+    //delete sample and create card elements with the api content
+    api_connection.getRandomImages(8)
+    .then(results =>{
+        displayResultsAsCards(search_results_el, results);
+    })
+ 
+    
+
+//validar tamano do texto
+function truncateText(text, max = 150){
+    if(text.length < max){
+        return text;
+    }
+
+    return text.slice(0, max) + "[...]";
+}
+
+
+ //pegar dados do formulario quando enviado
+ search_form_el.addEventListener("submit", function submitSearchAndLoadResults(event){
+   event.preventDefault();
+  
+   //dados do formulario
+   const form_data = new FormData(event.target);
+   const search_type = form_data.get("search-type");
+   const random_count = +form_data.get("random-qty");
+   const start_date = form_data.get("start-date");
+   const end_date = form_data.get("end-date");
+
+   if (search_type === "random" && random_count) {
+    
+     displayCardPlaceHolders(
+       search_results_el,
+       random_count <= 15 ? random_count : 15
+     );
+
+     api_connection
+       .getRandomImages(random_count)
+       .then((results) => {search_results_el.innerHTML ="";
+       displayResultsAsCards(search_results_el, results)})
+       .catch((err) => console.error(err));
+   }
+
+   if (search_type === "data-range" && start_date) {
+   
+     displayCardPlaceHolders(
+       search_results_el,
+       random_count <= 15 ? random_count : 15
+     );
+
+     api_connection
+       .getImagesForDateRange(start_date, end_date)
+       .then((results) => displayResultsAsCards(search_results_el, results))
+       .catch((err) => console.error(err));
+   }
+ }
+)
+
+
+//convertindo en array
+Array.from(search_type_options_els).forEach((opt_el) => {
+    opt_el.addEventListener("change", 
+    
+    function changeEnabledSearchType(event){
+            document.querySelectorAll('[data-search-type-fieldset]').forEach(fs => {
+               
+                fs.disabled = event.target.value !== fs.dataset.searchTypeFieldset
+              
+            })
+        })
+    
+})
+
+function dateToString(date){
+    const day = String(date.getDate());
+    const month_zero_based = date.getMonth();
+    const month = String(month_zero_based + 1).padStart(2,0);
+    const year = String(date.getFullYear())
+
+    return `${year}-${month}-${day}`;
+}
+
+now_string = dateToString(new Date())
+
+start_date_el.max = now_string;
+end_date_el.max = now_string;
+
+start_date_el.addEventListener("change", function changeStartDateMinLimit(event){
+    if(end_date_el.valueAsDate < event.target.valueAsDate){
+        end_date_el.value = event.target.value;
+    }
+
+    end_date_el.min = event.target.value;
+})
+
+
+   
+})
+
+ExercicioRecriarSite.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Incluir Font Awesome desde el CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+     body {
+        background-image: url('https://images.pexels.com/photos/572937/pexels-photo-572937.jpeg');
+        background-size: cover; /* Cover the entire container */
+        background-repeat: no-repeat; /* Prevent image from repeating */
+        font-family: poppins;
+        box-sizing: border-box;
+        
+    
+        }
+
+        header{
+            margin: 60px auto;
+            
+        }
+    
+        main {
+            max-width: 1387px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .main-title{
+                font-size: 4rem;
+				font-weight: 700;
+				color: #FFF;
+				line-height: 1rem;
+                
+        }
+
+        .second-title{
+                font-weight: 300;
+				font-size: 1rem;
+				display: block;
+				color: rgba(255, 255, 255, 0.90);
+                text-align: center;
+        }
+
+        .section-title{
+            background-color: white;
+            margin-top: -7px;
+            padding: 58.6667px 29.3333px;
+            
+        }
+
+        .main-image{
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+           
+        }
+
+
+       .main-section-title{
+        position: relative;
+        font-size: 1.604125rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        
+       }
+
+       .main-section-title:after{
+                    content: '';
+					position: absolute;
+					margin: auto;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					width:40%;
+					height: 1px;
+					background-color: rgba(0, 0, 0, 0.125);
+       }
+
+       .title-section{
+        padding-bottom:11px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+
+       .second-section-title{
+        margin: 0;
+        font-size: 11.7333px;
+        color: rgb(187, 187, 187);
+       }
+
+    .section-text-container{
+        padding: 88px;
+        background-color: #F8F7F5;
+    }
+
+    .section-text{
+        color:rgba(0, 0, 0, 0.5)
+    }
+
+    .second-content{
+        background-color: rgb(30, 31, 35);
+        padding: 88px;
+    }
+
+    .title-container{
+        padding: 29.3333px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(18, 19, 21);
+    }
+ 
+        .second-section-content-main-title{
+            position: relative;
+        font-size: 1.604125rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+            color: rgba(255, 255, 255);
+        }
+
+        .second-section-content-main-title:after{
+                    content: '';
+					position: absolute;
+					margin: auto;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					width:40%;
+					height: 1px;
+					background-color: #303132
+       }
+
+    .second-section-content-title{
+        color: rgba(255, 255, 255, 0.25);
+    }
+       
+    .section-content-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .second-section-header-imgs{
+  flex:0 auto calc(50% );
+  max-width: 100%;
+
+}
+
+    .last-container-item{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-items: auto;
+        background-color: #F4F4F4;
+        
+    }
+
+    .last-container-item-alt{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        text-align: right;
+        background-color: rgb(30, 31, 35);
+        
+    }
+
+    .section-content-text-container{
+        width: 50%;
+    padding: 88px;
+    
+    }
+
+    .last-content-img{
+  width: 50%;
+  height:100%
+}
+    .content-title{
+        margin-bottom: 14.6667px;
+        font-size: 19.8px;
+        font-weight: bold;
+        
+    }
+
+    .content-title-alt{
+        margin-bottom: 14.6667px;
+        font-size: 19.8px;
+        font-weight: bold;
+        color: white;
+        
+    }
+
+    .content-text{
+        color: #7A7A7A;
+    }
+
+    footer {
+    padding-bottom: 30px;
+    padding-top: 60px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+}
+
+footer i{
+    margin: 0 10px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .section-content-text-container {
+        width: 100%;
+    }
+
+
+    
+    .last-content-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width:1272px){
+    .second-section-header-imgs{
+  width: 100%;
+
+}
+}
+
+/* Para teléfonos móviles */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .main-section-title {
+        font-size: 1.2rem;
+    }
+    
+    .section-content-text-container {
+        padding: 30px;
+    }
+    
+    .last-content-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <span class="main-title">
+                Caminar
+            </span>
+            <span class="second-title">
+                by Alejandro
+            </span>
+        </header>
+        
+        <section>
+            <div class="main-container">
+                <img class="main-image" src="https://templated.co/items/demos/caminar/images/pic02.jpg" alt="walking" />
+                <div class="section-title">
+                    
+                    <div class="title-section">
+                    <span class="main-section-title">
+                        Fringilla Fermentum Tellus
+                    </span>
+                    <span class="second-section-title">
+                        VEHICULA URNA SED JUSTO BIBENDUM
+                    </span>
+                </div>
+                </div>
+                <div class="section-text-container">
+                    <p class="section-text">
+                        Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel.
+                        Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum
+                        lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel. Vestibulum et efficitur
+                        urna. Duis velit nulla, interdum sed felis sit amet, facilisis auctor nunc. Cras luctus urna at
+                        risus feugiat scelerisque nec sed diam.
+                    </p>
+
+                    <p class="section-text">
+                        Nunc fringilla metus odio, at rutrum augue tristique vel. Nulla ac tellus a neque ullamcorper
+                        porta a vitae ipsum. Morbi est sapien, hendrerit quis mi in, aliquam bibendum orci. Vestibulum
+                        imperdiet nibh vitae maximus posuere. Aenean sit amet nibh feugiat, condimentum tellus eu,
+                        malesuada nunc. Mauris ac pulvinar turpis, sit amet pharetra est. Ut bibendum justo condimentum,
+                        vehicula ex vel, venenatis libero. Etiam vehicula urna sed justo bibendum, ac lacinia nunc
+                        pulvinar. Integer nec velit orci. Vestibulum pellentesque varius dapibus. Morbi ullamcorper
+                        augue est, sed luctus orci fermentum dictum. Nunc tincidunt, nisl consequat convallis viverra,
+                        metus nisl ultricies dui, vitae dapibus ligula urna sit amet nibh. Duis ut venenatis enim.
+                    </p>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="second-content">
+                    <div class="title-container">
+                        <span class="second-section-content-main-title">
+                            Vestibulum Convallis
+                        </span>
+                        <span class="second-section-content-title">
+                            VEHICULA URNA SED JUSTO BIBENDUM
+                        </span>
+                    </div>
+                    
+                    <div class="section-content-container">
+                        <img src="https://templated.co/items/demos/caminar/images/pic03.jpg" alt=""
+                            class="second-section-header-imgs" />
+                        <img src="https://templated.co/items/demos/caminar/images/pic01.jpg" alt=""
+                            class="second-section-header-imgs" />
+                        <img src="https://templated.co/items/demos/caminar/images/pic04.jpg" alt=""
+                            class="second-section-header-imgs" />
+                        <img src="https://templated.co/items/demos/caminar/images/pic05.jpg" alt=""
+                            class="second-section-header-imgs" />
+                    </div>
+        </section>
+
+        <section>
+                <div class="last-container">
+                    <div class="last-container-item">
+                        <div class="section-content-text-container">
+                            <span class="content-title">
+                                Viverra Hendrerit
+                            </span>
+                            <p class="content-text">
+                                Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel.
+                                Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel
+                                elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.
+                            </p>
+                        </div>
+                        <img src="https://templated.co/items/demos/caminar/images/pic06.jpg" alt=""
+                            class="last-content-img" />
+                    </div>
+                    <div class="last-container-item-alt">
+                        <img src="https://templated.co/items/demos/caminar/images/pic07.jpg" alt=""
+                            class="last-content-img" />
+                        <div class="section-content-text-container">
+                            <span class="content-title-alt">
+                                Curabitur Eget
+                            </span>
+                            <p class="content-text">
+                                Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel.
+                                Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel
+                                elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+                        </div>
+                        
+                    </div>
+                    <div class="last-container-item">
+                        <div class="section-content-text-container">
+                            <span class="content-title">
+                                Morbi Eleifend
+                            </span>
+                            <p class="content-text">
+                                Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel.
+                                Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel
+                                elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+                        </div>
+                        <img src="https://templated.co/items/demos/caminar/images/pic08.jpg" alt=""
+                            class="last-content-img" />
+                    </div>
+                </div>
+            
+        </section>
+
+    <footer>
+        <i class="fa-brands fa-twitter fa-2x" style="color: #d2d1d1;"></i>
+        <i class="fa-brands fa-facebook-f fa-2x "style="color: #d2d1d1;"></i>
+        <i class="fa-brands fa-instagram fa-2x" style="color: #d2d1d1;"></i>
+        <i class="fa-regular fa-envelope fa-2x" style="color: #d2d1d1;"></i>
+    </footer>
+</body>
+
+</html>
+
+
+/formApiExercicio.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+ document.addEventListener("DOMContentLoaded", function () {
+
+
+    let cepData;
+    function fetchCep(){
+
+let formData = new FormData(
+  document.querySelector("#contact-form")
+);
+let cep = formData.get("cep");
+
+
+
+fetch(`https://viacep.com.br/ws/${cep}/json/`)
+  .then((resp) => {
+    if (resp.ok) {
+      return resp.json();
+    } else {
+      throw new Error("Código de erro: " + resp.status);
+    }
+  })
+  .then((data) => {
+     
+    cepData = data;
+      searchCep();
+  })
+  .catch((erro) => {
+    console.log("Erro na requisição:", erro);
+    alert("parece que o cep é incorreto");
+  });
+
+
+}
+
+function searchCep(){
+          
+    let addressData = cepData;
+            if(!document.querySelector('#address-information')){
+
+            let cepInformation = document.querySelector('#cep-information');
+            
+            let addressDataElement = document.createElement('span');
+            addressDataElement.id = ('address-information');
+            addressDataElement.textContent = `Cep: ${addressData.cep}, Logradouro: ${addressData.logradouro}, Bairro: ${addressData.bairro}, Estado: ${addressData.uf}`;
+            cepInformation.appendChild(addressDataElement)
+        }
+        else{
+            document.querySelector('#address-information').textContent = `Cep: ${addressData.cep}, Logradouro: ${addressData.logradouro}, Bairro: ${addressData.bairro}, Estado: ${addressData.uf}`;
+        }
+}
+    
+        document.querySelector("#contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log('submit')
+            fetchCep();
+      
+
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <br /><br />
+    <form action="" id="contact-form">
+      <label for="input-box-cep" class="form-input-label-text"
+        >Validar endereço colocar cep:</label
+      >
+      <input
+        id="input-box-cep"
+        type="number"
+        class="input-box"
+        name="cep"
+        maxlength="60"
+        required
+      />
+
+      <br /><br />
+      <button id="submit-button" type="submit"><p>ENVIAR</p></button>
+    </form>
+
+    <div id="cep-information">
+        <br /><br />
+
+    </div>
+  </body>
+</html>
+
+
+
+

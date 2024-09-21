@@ -1,0 +1,22 @@
+npx create-react-app my-app
+
+npm install -g npm@latest
+
+cd my-app
+
+npm start
+
+npm run backend
+
+
+npm install react
+npm install react-dom
+npm install bcryptjs
+npm install mongodb
+npm install mongoose
+npm install next
+npm install next-auth
+npm install swr
+
+Para testar:
+npm run dev

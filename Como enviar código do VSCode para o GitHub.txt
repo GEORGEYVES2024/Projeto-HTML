@@ -1,0 +1,43 @@
+Vou te mostrar como enviar código do **VSCode** para o **GitHub**. Aqui estão os passos:
+
+1. **Ter uma conta no GitHub**: Se você ainda não tem, crie uma conta no [GitHub](https://github.com/).
+
+2. **Vincular sua conta do GitHub com o VSCode**: Abra o VSCode e vá para a seção de controle de origem (Source Control). Clique no ícone de engrenagem e escolha "Sign in with GitHub". Siga as instruções para autorizar o acesso.
+
+3. **Criar uma pasta e adicionar arquivos**: Crie uma pasta para o seu projeto no seu computador. Adicione os arquivos do seu projeto a essa pasta.
+
+4. **Inicializar o repositório Git**: No terminal do VSCode, digite `git init` e pressione Enter. Isso criará um repositório Git vazio na pasta do seu projeto.
+
+5. **Adicionar arquivos ao repositório**: Use o comando `git add .` para adicionar todos os arquivos do seu projeto ao repositório.
+
+6. **Fazer um commit**: Execute o comando `git commit -m 'Meu comentário bonito'` para criar uma revisão com um número e comentário.
+
+7. **Criar um repositório no GitHub**: Acesse o [GitHub](https://github.com/), faça login e clique no botão "New" para criar um novo repositório. Dê um nome ao repositório e clique em "Create Repository".
+
+8. **Vincular o repositório local ao GitHub**: No terminal do VSCode, execute o comando `git remote add origin <URL_DO_REPOSITÓRIO>` substituindo `<URL_DO_REPOSITÓRIO>` pelo endereço do repositório que você criou no GitHub.
+
+9. **Enviar o código para o GitHub**: Finalmente, use o comando `git push origin master` para enviar o código do seu projeto para o repositório no GitHub.
+
+E pronto! Seu código agora está no GitHub. 🚀⁵⁶
+
+
+
+Para pegar um código do GitHub e usá-lo no Visual Studio Code (VSCode), siga estes passos:
+
+Instale o Git: Se ainda não tiver o Git instalado, baixe e instale-o a partir do site oficial.
+Clone o repositório:
+Abra o VSCode.
+Pressione Ctrl + Shift + P para abrir a paleta de comandos.
+Digite Git: Clone e selecione a opção.
+Cole a URL do repositório do GitHub que você deseja clonar e pressione Enter.
+Escolha um diretório local onde o repositório será clonado.
+
+Abra o projeto:
+Após clonar o repositório, o VSCode perguntará se você deseja abrir o projeto. Clique em “Abrir”.
+Faça alterações e commit:
+Faça as alterações necessárias no código.
+Vá para a aba de controle de código-fonte (ícone de ramificação na barra lateral esquerda).
+Adicione uma mensagem de commit e clique no ícone de check para confirmar as alterações.
+
+Push para o GitHub:
+Após o commit, clique no ícone de três pontos na aba de controle de código-fonte e selecione Push para enviar suas alterações para o GitHub.
